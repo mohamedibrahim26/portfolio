@@ -400,7 +400,7 @@
           <div class="stat-label">Papers Screened</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num"><span class="counter" data-target="2">0</span></div>
+          <div class="stat-num"><span class="counter" data-target="3">0</span></div>
           <div class="stat-label">Degrees Completed</div>
         </div>
       </div>
@@ -438,7 +438,7 @@
     <div class="about-grid">
       <div class="about-bio reveal">
         <p>
-          I'm a software engineer and cybersecurity researcher with a multidisciplinary background spanning mechanical engineering, computer engineering, and cybersecurity. I hold an MSc in Cybersecurity from Jönköping University, Sweden, where my thesis research focused on evaluating cybersecurity awareness measurement practices in SMEs using a PRISMA-based Systematic Literature Review.
+          I'm a software engineer and cybersecurity researcher with a multidisciplinary background spanning mechanical engineering, computer engineering, and cybersecurity. I hold an MSc in Cybersecurity from Jönköping University, Sweden, where my co-authored thesis was a PRISMA-based Systematic Literature Review of how organisations measure cybersecurity awareness, with a focus on the gap for SMEs.
         </p>
         <p>
           On the engineering side, I have hands-on experience building full-stack web applications using React, Node.js, and TypeScript. I'm increasingly focused on the intersection of AI-assisted systems, security research, and human-computer interaction, and I enjoy communicating complex technical findings in clear, actionable ways.
@@ -457,7 +457,6 @@
       </div>
 
       <div class="info-grid reveal">
-        <div class="info-row"><span class="info-icon">🎂</span><span class="info-key">Birthday</span><span class="info-val">26 October 1999</span></div>
         <div class="info-row"><span class="info-icon">📍</span><span class="info-key">Location</span><span class="info-val">Jönköping, Sweden</span></div>
         <div class="info-row"><span class="info-icon">📧</span><span class="info-key">Email</span><span class="info-val"><a href="mailto:mohamedibrahim7892522@gmail.com">mohamedibrahim7892522@gmail.com</a></span></div>
         <div class="info-row"><span class="info-icon">📞</span><span class="info-key">Phone</span><span class="info-val">+46 76 456 6073</span></div>
@@ -671,8 +670,8 @@
               <button class="proj-link-btn" onclick="openPoster('https://raw.githubusercontent.com/mohamedibrahim26/masters-thesis-csa-indicators/main/Master%20Thesis%20Poster.jpeg')">📊 Poster</button>
             </div>
           </div>
-          <div class="proj-period">Jan 2026 – Jun 2026 · MSc Thesis · Jönköping University</div>
-          <div class="proj-title">Indicators and Practices for Assessing Cybersecurity Awareness in SMEs</div>
+          <div class="proj-period">Jan 2026 – Jun 2026 · MSc Thesis (with Sahala Kallan Mulleri) · Jönköping University</div>
+          <div class="proj-title">Indicators and Practices for Assessing Cybersecurity Awareness in Organisations</div>
           <p class="proj-desc">
             PRISMA-based Systematic Literature Review screening 4,510 papers (3,754 after deduplication) across IEEE Xplore, ACM, Scopus, and SpringerLink; 52 studies selected.
             Identified and classified cybersecurity awareness indicators into four categories (self-reported, behavioural, organisational, knowledge-based) and uncovered a significant research gap in SME-focused measurement frameworks.
@@ -701,9 +700,9 @@
           <p class="proj-desc">
             Faithful small-scale reimplementation of Anthropic's Natural Language Autoencoder paper on Qwen2.5-0.5B,
             conducted as a KTH ASSERT-lab task under Prof. Monperrus. Trained a paired verbalizer and reconstructor using LoRA,
-            achieving FVE of 3.0% on generated descriptions vs –6.5% for random text. A paraphrase faithfulness test confirmed
-            the bottleneck carries genuine semantic content: surface rewrites left FVE essentially unchanged (0.032 vs 0.030),
-            reproducing the paper's qualitative confabulation finding at small scale.
+            reaching FVE of 3.0% on generated descriptions vs –6.5% for random text. A paraphrase test left FVE essentially unchanged (0.032 vs 0.030),
+            suggesting the bottleneck carries topic-level meaning rather than hidden token codes, and the samples reproduce the paper's
+            qualitative finding that themes are recovered while specifics are confabulated. Includes a GRPO RL phase and a layer ablation.
           </p>
           <div class="proj-tags">
             <span class="proj-tag">NLP</span>
@@ -729,8 +728,8 @@
           <div class="proj-period">2025 – 2026</div>
           <div class="proj-title">Orion-XAI: Fine-Tuned LLM for Explainable AI in Cybersecurity</div>
           <p class="proj-desc">
-            Full-stack AI chat application built around a custom fine-tuned model: Llama 3.2 3B trained with LoRA on 2,918 instruction examples
-            covering SHAP, LIME, and Anchors for SOC decision support. Dataset built from scratch grounded in primary XAI literature (Ribeiro et al. 2016/2018, Lundberg &amp; Lee 2017).
+            Full-stack AI chat application built around a custom fine-tuned model: Llama 3.2 3B trained with QLoRA on 4,169 synthetic instruction examples
+            covering SHAP, LIME, Anchors, SOC triage and MITRE ATT&amp;CK. Dataset built from scratch, grounded in primary XAI literature (Ribeiro et al. 2016/2018, Lundberg &amp; Lee 2017).
             Includes a RAG pipeline (ChromaDB + FastAPI), multi-provider LLM fallback (Groq, OpenAI, Anthropic, Ollama), JWT auth system, admin dashboard, and workspace/project organisation.
           </p>
           <div class="proj-tags">
@@ -740,8 +739,35 @@
             <span class="proj-tag">RAG</span>
             <span class="proj-tag">Node.js</span>
             <span class="proj-tag">FastAPI</span>
-            <span class="proj-tag">PostgreSQL</span>
+            <span class="proj-tag">SQLite</span>
             <span class="proj-tag">Cybersecurity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-top-bar"></div>
+        <div class="proj-body">
+          <div class="proj-head">
+            <span class="proj-emoji">💬</span>
+            <div class="proj-links">
+              <a href="https://github.com/mohamedibrahim26/ai-life-companion" class="proj-link-btn" target="_blank">⎈ GitHub</a>
+            </div>
+          </div>
+          <div class="proj-period">2026</div>
+          <div class="proj-title">Vera: AI Life Companion</div>
+          <p class="proj-desc">
+            Full-stack AI companion with long-term conversation memory, goal and mood tracking, and live two-way voice calls (Web Speech API + ElevenLabs).
+            Built with security in mind: per-user access control on every route, server-side admin gating, rate limiting, GDPR data export and account deletion,
+            and a security test suite running in GitHub Actions with CodeQL scanning.
+          </p>
+          <div class="proj-tags">
+            <span class="proj-tag">React</span>
+            <span class="proj-tag">Node.js</span>
+            <span class="proj-tag">FastAPI</span>
+            <span class="proj-tag">LLM</span>
+            <span class="proj-tag">SQLite</span>
+            <span class="proj-tag">AppSec</span>
           </div>
         </div>
       </div>
